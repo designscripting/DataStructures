@@ -8,6 +8,9 @@ Print the nodes in a level
         2   6     9
            / \   /
           5  11 4
+ Traverses from top to bottom, when level == 1, print node.data
+ Here recursive acts like a while loop
+ 
  */
 class Node{
     int data;
