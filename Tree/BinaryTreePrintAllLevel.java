@@ -47,7 +47,7 @@ public class BinaryTree {
         printItemsinLevel(root.right, level-1);
     }
 
-    public void printLeftView(Node root){
+    public void printLevels(Node root){
         int height = getHeightOfTree(root);
         for(int level=0;level<=height;level++){
             printItemsinLevel(root, level+1);
@@ -67,7 +67,7 @@ public class BinaryTree {
         root.right.right = bt.createNode(9);
         root.right.right.left = bt.createNode(4);
 
-        bt.printLeftView(root);
+        bt.printLevels(root);
     }
 
 }
