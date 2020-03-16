@@ -13,7 +13,6 @@ Print the nodes in each level
            / \   /
           5  11 4
 
-
  */
 
 class Node{
