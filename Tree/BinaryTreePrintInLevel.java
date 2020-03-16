@@ -53,3 +53,6 @@ public class BinaryTree {
     }
 
 }
+
+// Outputs
+// 5 11 4
