@@ -23,7 +23,9 @@ class Node{
 }
 
 public class BinaryTree {
+    
     //Print the tree to view mirror tree
+    // Utility to print tree, not related to this example
     static void printLevelOrder(Node root)
     {
         if (root == null)
