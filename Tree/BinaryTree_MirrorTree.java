@@ -21,7 +21,7 @@ class Node{
     int data;
     Node left;
     Node right;
-    int depth;
+    int depth;// Property added to print functionality, Not used in example
 }
 
 public class BinaryTree {
