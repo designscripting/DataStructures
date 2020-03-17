@@ -1,6 +1,8 @@
 /*
 
 Mirror a tree
+Left View
+Right View
 
             2
            /  \
@@ -24,7 +26,7 @@ class Node{
 
 public class BinaryTree {
     
-    //Print the tree to view mirror tree
+    // Print the tree to view mirror tree
     // Utility to print tree, not related to this example
     static void printLevelOrder(Node root)
     {
