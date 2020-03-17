@@ -1,8 +1,6 @@
 /*
 
 Mirror a tree
-Left View
-Right View
 
             2
            /  \
@@ -28,7 +26,7 @@ public class BinaryTree {
     
     // Print the tree to view mirror tree
     // Utility to print tree, not related to this example
-    static void printLevelOrder(Node root)
+    static void printTree(Node root)
     {
         if (root == null)
             return;
@@ -101,10 +99,10 @@ public class BinaryTree {
         root.right.right = bt.createNode(9);
         root.right.right.left = bt.createNode(4);
 
-        BinaryTree.printLevelOrder(root);
+        BinaryTree.printTree(root);
         Node mirrorTree = bt.mirrorTree(root);
         System.out.println();
-        BinaryTree.printLevelOrder(mirrorTree);
+        BinaryTree.printTree(mirrorTree);
     }
 
 }
