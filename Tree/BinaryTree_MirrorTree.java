@@ -77,29 +77,6 @@ public class BinaryTree {
     }
 
     int maxLevel;
-    public void printLeftView(Node root, int level){
-        if (root == null)
-            return;
-        if(level >= maxLevel){
-            System.out.printf(" "+root.data);
-            maxLevel++;
-        }
-        printLeftView(root.left, level+1);
-        printLeftView(root.right, level+1);
-    }
-
-    public void printRightView(Node root, int level){
-        if (root == null)
-            return;
-        if(level >= maxLevel){
-            System.out.printf(" "+root.data);
-            maxLevel++;
-        }
-        //traverse right first
-        printRightView(root.right, level+1);
-        printRightView(root.left, level+1);
-    }
-
     public Node mirrorTree(Node node){
         if(node == null) return null;
         Node temp = node.left;
