@@ -1,3 +1,9 @@
+/*
+Contains BFS and DFS
+Uses the adjacent list for the graph representation
+
+*/
+
 //Queue used in BFS
 class Queue {
   private items;
@@ -29,7 +35,7 @@ class Graph {
   addVertex(v: string){
     this.adjlist.set(v,[])
   }
-
+  // Adding bidirectional link
   addEdge(v: string,w: string) {
     this.adjlist.get(v).push(w);
     this.adjlist.get(w).push(v);
@@ -46,6 +52,7 @@ class Graph {
   }
 
   BFS(startingNode: string) {
+    //initially reset the visited list
     let visited = Array.from(this.adjlist.keys());
     for(const i of visited){
       visited[i] = false;
@@ -53,6 +60,8 @@ class Graph {
 
     let q = new Queue();
     visited[startingNode] = true;
+    // Start by putting any one of the graph's vertices at the back of a queue.
+    // Take the front item of the queue and add it to the visited list.
     q.enqueue(startingNode);
     
     while(!q.isEmpty()){
@@ -74,13 +83,15 @@ class Graph {
     }
     this.DFSRecursive(startingNode, visited)
   }
-
+  
+  // Uses Recursive for DFS, same can be done using stack
   DFSRecursive(v: string, visited: Array<string>){
     visited[v] = true;
     console.log(v);
     this.adjlist.get(v).some( neighbour => {
-      if (!visited[neighbour]) 
+      if (!visited[neighbour]) {
             this.DFSRecursive(neighbour, visited);
+      }
     });
   }
 
