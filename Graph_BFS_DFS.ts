@@ -1,7 +1,7 @@
 /*
 Contains BFS and DFS
 Uses the adjacent list for the graph representation
-
+This code uses Queue for BFS and recursive 
 */
 
 //Queue used in BFS
